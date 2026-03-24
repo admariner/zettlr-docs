@@ -112,9 +112,11 @@ These shortcuts work when editing Markdown files.
 |----------------------------------------------------------------|------------------------------|
 | <kbd>Cmd/Ctrl</kbd>+<kbd>B</kbd>                    | Bold                         |
 | <kbd>Cmd/Ctrl</kbd>+<kbd>I</kbd>                    | Italic                       |
+| <kbd>Cmd/Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>H</kbd>   | Highlight Text               |
 | <kbd>Cmd/Ctrl</kbd>+<kbd>K</kbd>                    | Insert link                  |
 | <kbd>Cmd/Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd>   | Insert image                 |
 | <kbd>Cmd/Ctrl</kbd>+<kbd>T</kbd>                    | Create task-list             |
+| <kbd>Cmd/Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd>   | Create Footnote              |
 | <kbd>Cmd/Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd>   | Toggle comment               |
 | <kbd>Cmd/Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>C</kbd>     | Copy with formatting         |
 | <kbd>Cmd/Ctrl</kbd>+<kbd>V</kbd>                    | Paste with formatting        |
