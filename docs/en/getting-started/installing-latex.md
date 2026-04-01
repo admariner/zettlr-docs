@@ -70,16 +70,20 @@ $ flatpak install org.freedesktop.Sdk.Extension.texlive
 
 ## Installing Additional Packages
 
-Most LaTeX features come in the form of packages. By default, minimal installations only come with a basic set of packages. The default template that Zettlr uses requires a few additional packages to be present on your system, however. You'll need to install these packages, but they are often just a few Kilobytes large so they won't occupy much disk space.
+Most LaTeX features come in the form of packages. By default, minimal installations only come with a basic set of packages. The default template that Zettlr uses requires a few additional packages to be present on your system. You'll need to install these packages, but they are often just a few Kilobytes large so they won't occupy much disk space. Even with the large or full installations, some packages might be missing.
 
 We recommend you don't install packages unless Zettlr complains during exports. If you are missing some package, Zettlr will give you one of two errors: either `Command \somecommand not defined` or `File somefile.sty not found`. In both cases it is likely that the command or file will be provided by a package. It's easy to install the missing packages using the following procedure.
 
 !!! note
 
-    On Windows, LaTeX will attempt to install the missing packages automatically and will ask you if it should do so. This means you only need to confirm a dialog (once per missing package). On macOS and Linux, you'll need to use the command line.
+    On Windows, LaTeX will attempt to install the missing packages automatically and will ask you if it should do so. This means you only need to confirm a dialog. On macOS and Linux, you'll need to use the command line. More specifically, on macOS and Linux, you need to use a tool called `tlmgr` (TeXLive Manager).
 
 1. All LaTeX packages are listed in the [“Comprehensive TeX Archive Network” (CTAN)](https://www.ctan.org/). Take the filename (including its extension, `.sty`) or the command, and search for it using the search bar.
 2. For example, if LaTeX complains that the command `\hypertarget` is not defined, [search for it like this](https://www.ctan.org/search?phrase=hypertarget).
 3. In the case of “hypertarget,” it will give you a single package: `gmiflink`. If there is more than one result, try to google which one you need. There is usually some discussion, since you are never the first to experience the issue.
 4. To install it on macOS or Linux, type `sudo tlmgr install <packagename>` into a terminal window.
 5. Then, try the export again. Repeat these steps until all missing packages are installed.
+
+!!! tip
+
+    Sometimes, the CTAN search gives you no results for your searches. An alternative to searching CTAN directly is to use `tlmgr`. You can query which packages contain a file by calling `tlmgr info <filename>`. For example, say Zettlr displays an error message that reads "File `biblatex.sty' not found." You can then query `tlmgr` for this file by running `tlmgr info biblatex.sty`. It will provide you several search results, which includes the package `biblatex`. You can then proceed to install it by running `tlmgr install biblatex` and wait until the command has finished. Then, try exporting again.
